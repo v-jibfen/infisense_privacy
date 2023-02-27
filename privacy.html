@@ -1,8 +1,676 @@
+<!doctype html>
 <html>
-
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=gb2312">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>pr.html</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+/* ���ı�����: #write */
+/* [TOC]Ŀ¼����: .md-toc-content */
+/* �������Ŀ¼�����: .sidebar-content */
+ 
+/** initialize css counter */
+#write, .sidebar-content,.md-toc-content{
+    counter-reset: h2
+}
+ 
+#write h1, .outline-h1, .md-toc-item.md-toc-h1 {
+    counter-reset: h2
+}
+ 
+#write h2, .outline-h2, .md-toc-item.md-toc-h2 {
+    counter-reset: h3
+}
+ 
+#write h3, .outline-h3, .md-toc-item.md-toc-h3 {
+    counter-reset: h4
+}
+ 
+#write h4, .outline-h4, .md-toc-item.md-toc-h4 {
+    counter-reset: h5
+}
+ 
+#write h5, .outline-h5, .md-toc-item.md-toc-h5 {
+    counter-reset: h6
+}
+ 
+/** put counter result into headings */
+/* һ�����ⲻչʾ */
+#write h1:before,
+.outline-h1>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h1>.md-toc-inner:before {
+    /* counter-increment: h1;
+    content: counter(h1) ". " */
+}
+ 
+/* �������� */
+#write h2:before,
+.outline-h2>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h2>.md-toc-inner:before {
+    counter-increment: h2;
+    content: counter(h2) ".   ";
+    /* content: counter(h2) ". " */
+}
+ 
+/* �������� */
+#write h3:before,
+h3.md-focus.md-heading:before, /** override the default style for focused headings */
+.outline-h3>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h3>.md-toc-inner:before {
+    text-decoration: none;
+    counter-increment: h3;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) ". " */
+    /* content: counter(h2) "." counter(h3) ". " */
+    content: counter(h2) "." counter(h3) "   "
+}
+ 
+/* �ļ����� */
+#write h4:before,
+h4.md-focus.md-heading:before,
+.outline-h4>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h4>.md-toc-inner:before {
+    text-decoration: none;
+    counter-increment: h4;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". " */
+    /* content: counter(h2) "." counter(h3) "." counter(h4) ". " */
+    content: counter(h2) "." counter(h3) "." counter(h4) "   "
+}
+ 
+/* �弶���� */
+#write h5:before,
+h5.md-focus.md-heading:before,
+.outline-h5>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h5>.md-toc-inner:before {
+    text-decoration: none;
+    counter-increment: h5;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". " */
+    /* content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". " */
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "   "
+}
+ 
+/* �������� */
+#write h6:before,
+h6.md-focus.md-heading:before,
+.outline-h6>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h6>.md-toc-inner:before {
+    text-decoration: none;
+    counter-increment: h6;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". " */
+    /* content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". " */
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) "   "
+}
+ 
+/** override the default style for focused headings */
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+    color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    position: inherit;
+    left:initial;
+    float: none;
+    top:initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+ 
+/* �����о� */
+ 
+/* ����һ�������о� */
+#write h1 {
+    margin-bottom:50px;
+    margin-top:50px;
+}
+ 
+#write h2 {
+    margin-bottom:30px;
+    margin-top:50px;
+}
+ 
+#write h3 {
+    margin-bottom:30px;
+    margin-top:30px;
+}
+ 
+#write h4 {
+    margin-bottom:30px;
+    margin-top:30px;
+}
+ 
+#write h5 {
+    margin-bottom:30px;
+    margin-top:30px;
+}
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ''><html>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
 <style>
 <!--
  /* Font Definitions */
@@ -10,29 +678,29 @@
 	{font-family:Helvetica;
 	panose-1:2 11 6 4 2 2 2 2 2 4;}
 @font-face
-	{font-family:����;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
-	{font-family:����;
+	{font-family:等线;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
-	{font-family:"���� Light";
+	{font-family:"等线 Light";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
-	{font-family:����;
+	{font-family:楷体;
 	panose-1:2 1 6 9 6 1 1 1 1 1;}
 @font-face
-	{font-family:"\@����";}
+	{font-family:"\@楷体";}
 @font-face
-	{font-family:"\@����";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
-	{font-family:"\@���� Light";}
+	{font-family:"\@等线 Light";}
 @font-face
-	{font-family:"\@����";
+	{font-family:"\@等线";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
@@ -42,9 +710,9 @@
 	margin-left:0cm;
 	line-height:107%;
 	font-size:11.0pt;
-	font-family:����;}
+	font-family:等线;}
 h1
-	{mso-style-link:"���� 1 �ַ�";
+	{mso-style-link:"标题 1 字符";
 	margin-top:12.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -53,11 +721,11 @@ h1
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:16.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	color:#2F5496;
 	font-weight:normal;}
 h2
-	{mso-style-link:"���� 2 �ַ�";
+	{mso-style-link:"标题 2 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -66,11 +734,11 @@ h2
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:14.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	color:#2F5496;
 	font-weight:normal;}
 h3
-	{mso-style-link:"���� 3 �ַ�";
+	{mso-style-link:"标题 3 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -79,11 +747,11 @@ h3
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:12.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	color:#1F3864;
 	font-weight:normal;}
 h4
-	{mso-style-link:"���� 4 �ַ�";
+	{mso-style-link:"标题 4 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -92,11 +760,11 @@ h4
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	font-weight:normal;
 	font-style:italic;}
 h5
-	{mso-style-link:"���� 5 �ַ�";
+	{mso-style-link:"标题 5 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -105,11 +773,11 @@ h5
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	color:#2F5496;
 	font-weight:normal;}
 h6
-	{mso-style-link:"���� 6 �ַ�";
+	{mso-style-link:"标题 6 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -118,11 +786,11 @@ h6
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	color:#1F3864;
 	font-weight:normal;}
 p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
-	{mso-style-link:"���� 7 �ַ�";
+	{mso-style-link:"标题 7 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -131,11 +799,11 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:11.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	color:#1F3864;
 	font-style:italic;}
 p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
-	{mso-style-link:"���� 8 �ַ�";
+	{mso-style-link:"标题 8 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -144,10 +812,10 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:10.5pt;
-	font-family:����;
+	font-family:等线;
 	color:#262626;}
 p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
-	{mso-style-link:"���� 9 �ַ�";
+	{mso-style-link:"标题 9 字符";
 	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -156,20 +824,20 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:10.5pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	color:#262626;
 	font-style:italic;}
 p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-	{mso-style-link:"��ע���� �ַ�";
+	{mso-style-link:"批注文字 字符";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:8.0pt;
 	margin-left:0cm;
 	line-height:107%;
 	font-size:11.0pt;
-	font-family:����;}
+	font-family:等线;}
 p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-link:"ҳü �ַ�";
+	{mso-style-link:"页眉 字符";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:8.0pt;
@@ -180,9 +848,9 @@ p.MsoHeader, li.MsoHeader, div.MsoHeader
 	border:none;
 	padding:0cm;
 	font-size:9.0pt;
-	font-family:����;}
+	font-family:等线;}
 p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-link:"ҳ�� �ַ�";
+	{mso-style-link:"页脚 字符";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:8.0pt;
@@ -190,53 +858,53 @@ p.MsoFooter, li.MsoFooter, div.MsoFooter
 	line-height:107%;
 	layout-grid-mode:char;
 	font-size:9.0pt;
-	font-family:����;}
+	font-family:等线;}
 p.MsoCaption, li.MsoCaption, div.MsoCaption
 	{margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:10.0pt;
 	margin-left:0cm;
 	font-size:9.0pt;
-	font-family:����;
+	font-family:等线;
 	color:#44546A;
 	font-style:italic;}
 p.MsoTitle, li.MsoTitle, div.MsoTitle
-	{mso-style-link:"���� �ַ�";
+	{mso-style-link:"标题 字符";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	font-size:28.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	letter-spacing:-.5pt;}
 p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
-	{mso-style-link:"���� �ַ�";
+	{mso-style-link:"标题 字符";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	font-size:28.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	letter-spacing:-.5pt;}
 p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
-	{mso-style-link:"���� �ַ�";
+	{mso-style-link:"标题 字符";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	font-size:28.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	letter-spacing:-.5pt;}
 p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
-	{mso-style-link:"���� �ַ�";
+	{mso-style-link:"标题 字符";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	font-size:28.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	letter-spacing:-.5pt;}
 p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
-	{mso-style-link:"������ �ַ�";
+	{mso-style-link:"副标题 字符";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:8.0pt;
 	margin-left:0cm;
 	line-height:107%;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	color:#5A5A5A;
 	letter-spacing:.75pt;}
 a:link, span.MsoHyperlink
@@ -250,25 +918,25 @@ strong
 em
 	{color:windowtext;}
 p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
-	{mso-style-link:"��ע���� �ַ�";
+	{mso-style-link:"批注主题 字符";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:8.0pt;
 	margin-left:0cm;
 	line-height:107%;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	font-weight:bold;}
 p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
 	{margin:0cm;
 	margin-bottom:.0001pt;
 	font-size:11.0pt;
-	font-family:����;}
+	font-family:等线;}
 p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
 	{margin:0cm;
 	margin-bottom:.0001pt;
 	font-size:11.0pt;
-	font-family:����;}
+	font-family:等线;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{margin-top:0cm;
 	margin-right:0cm;
@@ -277,20 +945,20 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	text-indent:21.0pt;
 	line-height:107%;
 	font-size:11.0pt;
-	font-family:����;}
+	font-family:等线;}
 p.MsoQuote, li.MsoQuote, div.MsoQuote
-	{mso-style-link:"���� �ַ�";
+	{mso-style-link:"引用 字符";
 	margin-top:10.0pt;
 	margin-right:43.2pt;
 	margin-bottom:8.0pt;
 	margin-left:43.2pt;
 	line-height:107%;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	color:#404040;
 	font-style:italic;}
 p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
-	{mso-style-link:"�������� �ַ�";
+	{mso-style-link:"明显引用 字符";
 	margin-top:18.0pt;
 	margin-right:43.2pt;
 	margin-bottom:18.0pt;
@@ -300,7 +968,7 @@ p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
 	border:none;
 	padding:0cm;
 	font-size:11.0pt;
-	font-family:����;
+	font-family:等线;
 	color:#4472C4;
 	font-style:italic;}
 span.MsoSubtleEmphasis
@@ -330,18 +998,18 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	line-height:107%;
 	page-break-after:avoid;
 	font-size:16.0pt;
-	font-family:"���� Light";
+	font-family:"等线 Light";
 	color:#2F5496;}
 span.a
-	{mso-style-name:"ҳü �ַ�";
-	mso-style-link:ҳü;}
+	{mso-style-name:"页眉 字符";
+	mso-style-link:页眉;}
 span.a0
-	{mso-style-name:"ҳ�� �ַ�";
-	mso-style-link:ҳ��;}
+	{mso-style-name:"页脚 字符";
+	mso-style-link:页脚;}
 span.2
-	{mso-style-name:"���� 2 �ַ�";
-	mso-style-link:"���� 2";
-	font-family:"���� Light";
+	{mso-style-name:"标题 2 字符";
+	mso-style-link:"标题 2";
+	font-family:"等线 Light";
 	color:#2F5496;}
 p.center, li.center, div.center
 	{mso-style-name:center;
@@ -349,81 +1017,81 @@ p.center, li.center, div.center
 	margin-left:0cm;
 	line-height:107%;
 	font-size:12.0pt;
-	font-family:����;}
+	font-family:宋体;}
 span.1
-	{mso-style-name:"���� 1 �ַ�";
-	mso-style-link:"���� 1";
-	font-family:"���� Light";
+	{mso-style-name:"标题 1 字符";
+	mso-style-link:"标题 1";
+	font-family:"等线 Light";
 	color:#2F5496;}
 span.3
-	{mso-style-name:"���� 3 �ַ�";
-	mso-style-link:"���� 3";
-	font-family:"���� Light";
+	{mso-style-name:"标题 3 字符";
+	mso-style-link:"标题 3";
+	font-family:"等线 Light";
 	color:#1F3864;}
 span.4
-	{mso-style-name:"���� 4 �ַ�";
-	mso-style-link:"���� 4";
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
 	font-style:italic;}
 span.5
-	{mso-style-name:"���� 5 �ַ�";
-	mso-style-link:"���� 5";
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
 	color:#2F5496;}
 span.6
-	{mso-style-name:"���� 6 �ַ�";
-	mso-style-link:"���� 6";
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
 	color:#1F3864;}
 span.7
-	{mso-style-name:"���� 7 �ַ�";
-	mso-style-link:"���� 7";
-	font-family:"���� Light";
+	{mso-style-name:"标题 7 字符";
+	mso-style-link:"标题 7";
+	font-family:"等线 Light";
 	color:#1F3864;
 	font-style:italic;}
 span.8
-	{mso-style-name:"���� 8 �ַ�";
-	mso-style-link:"���� 8";
+	{mso-style-name:"标题 8 字符";
+	mso-style-link:"标题 8";
 	color:#262626;}
 span.9
-	{mso-style-name:"���� 9 �ַ�";
-	mso-style-link:"���� 9";
-	font-family:"���� Light";
+	{mso-style-name:"标题 9 字符";
+	mso-style-link:"标题 9";
+	font-family:"等线 Light";
 	color:#262626;
 	font-style:italic;}
 span.a1
-	{mso-style-name:"���� �ַ�";
-	mso-style-link:����;
-	font-family:"���� Light";
+	{mso-style-name:"标题 字符";
+	mso-style-link:标题;
+	font-family:"等线 Light";
 	letter-spacing:-.5pt;}
 span.a2
-	{mso-style-name:"������ �ַ�";
-	mso-style-link:������;
+	{mso-style-name:"副标题 字符";
+	mso-style-link:副标题;
 	color:#5A5A5A;
 	letter-spacing:.75pt;}
 span.a3
-	{mso-style-name:"���� �ַ�";
-	mso-style-link:����;
+	{mso-style-name:"引用 字符";
+	mso-style-link:引用;
 	color:#404040;
 	font-style:italic;}
 span.a4
-	{mso-style-name:"�������� �ַ�";
-	mso-style-link:��������;
+	{mso-style-name:"明显引用 字符";
+	mso-style-link:明显引用;
 	color:#4472C4;
 	font-style:italic;}
 span.a5
-	{mso-style-name:"��ע���� �ַ�";
-	mso-style-link:��ע����;}
+	{mso-style-name:"批注文字 字符";
+	mso-style-link:批注文字;}
 span.a6
-	{mso-style-name:"��ע���� �ַ�";
-	mso-style-link:��ע����;
+	{mso-style-name:"批注主题 字符";
+	mso-style-link:批注主题;
 	font-weight:bold;}
 p.tar, li.tar, div.tar
 	{mso-style-name:tar;
 	margin-right:0cm;
 	margin-left:0cm;
 	font-size:12.0pt;
-	font-family:����;}
+	font-family:宋体;}
 .MsoChpDefault
 	{font-size:11.0pt;
-	font-family:����;}
+	font-family:等线;}
 .MsoPapDefault
 	{margin-bottom:8.0pt;
 	line-height:107%;}
@@ -440,324 +1108,126 @@ div.WordSection1
 ul
 	{margin-bottom:0cm;}
 -->
-</style>
-
-</head>
-
-<body lang=ZH-CN link=blue vlink="#954F72" style='text-justify-trim:punctuation'>
-
-<div class=WordSection1 style='layout-grid:15.6pt'>
-
-<p class=MsoNormal align=center style='margin-top:15.0pt;margin-right:0cm;
-margin-bottom:15.0pt;margin-left:0cm;text-align:center'><b><span
-style='font-size:20.0pt;font-family:����;color:#333333'>�û���˽���߼���������</span></b></p>
-
-<h1><strong>�û���˽����</strong></h1>
-
-<p class=MsoNormalCxSpFirst style='line-height:normal;word-break:break-all'><span
-lang=EN-US style='font-family:����;color:#333333'><br>
-</span><span style='font-family:����;color:#333333'>����Ӣ�Ƹ�֪�������޹�˾�����¼�Ʊ���˾�����ز������û���˽������ʹ�ñ���˾�ṩ�Ĳ�Ʒ�����ʱ�����ǽ����ա��û���˽���ߡ������¼�ơ�����˽���ߡ���</span><span
-style='font-family:����'>��ѭ�Ϸ�����������Ҫ��ԭ�򣬹�����ʾ�ռ���ʹ�����ĸ�����Ϣ��<span lang=EN-US><br>
-</span><b>����Ŭ����ͨ���׶���������Ҫ�����ֽ��б�����Ա���˽������������Ȩ��������ص�������ô����ֽ��б�ע����ʾ��ע�⡣</b>����<span
-style='color:#333333'>��ϸ�Ķ�����˽���ߵ�ȫ�������Ա����˽Ȿ��Ʒ�ռ���ʹ����������Ϣ��Ŀ�ġ���Χ����ʽ�ȡ�<b>�����Ϊ<span
-lang=EN-US>14</span>�������£������Ķ�ͯ���������ڷ����໤����ͬ�����ı���˽���ߣ��������໤�����Ĳ�ͬ���������ʹ�ñ���˾��Ʒ���ṩ������Ϣ���������໤�˲�ͬ�Ȿ��˽�����κ����ݣ���Ӧ����ֹͣʹ�ñ���˾�Ĳ�Ʒ����񡣵���ʹ�ñ���˾�ṩ����һ��Ʒ�����ʱ������ʾ����ͬ�����ǰ��ձ���˽�������ռ���ʹ�á��洢�ͱ������������Ϣ��</b>�����Ա���˽�������κ����ʣ�����ͨ��������ϵ�绰</span></span><span
-lang=EN-US>400-998-3088</span><span style='font-family:����;color:#333333'>���߷����ʼ���</span><span
-lang=EN-US>sales@infisense.cn</span><span style='font-family:����;color:#333333'>��������ϵ�����ǻ��ڷ��������ڼ�ʱ��������������ߡ�<span
-lang=EN-US><br>
-</span>������֪������Ϣ��������Ҫ�ԣ����ᾡȫ���������ĸ�����Ϣ��ȫ�ɿ�������������ά���������ǵ����Σ��������ԭ�򣬱������ĸ�����Ϣ��Ȩ��һ��ԭ��Ŀ����ȷԭ��ѡ��ͬ��ԭ����С��Ҫԭ��ȷ����ȫԭ���������ԭ�򡢹���͸��ԭ��ȡ�ͬʱ�����ǳ�ŵ��<b>���ǽ���ҵ�����İ�ȫ��׼����ȡ��Ӧ�İ�ȫ������ʩ���������ĸ�����Ϣ��</b><span
-lang=EN-US><br>
+</style></head><body lang=ZH-CN link=blue vlink="#954F72" style='text-justify-trim:punctuation'><div class="WordSection1" style="layout-grid:15.6pt"></div><p class="MsoNormal" align="center" style="margin-top:15.0pt;margin-right:0cm;
+margin-bottom:15.0pt;margin-left:0cm;text-align:center"><b><span style="font-size:20.0pt;font-family:楷体;color:#333333">用户隐私政策及免责声明</span></b></p><h1><strong>用户隐私政策</strong></h1><p class="MsoNormalCxSpFirst" style="line-height:normal;word-break:break-all"><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+</span><span style="font-family:楷体;color:#333333">无锡英菲感知技术有限公司（以下简称本公司）尊重并保护用户隐私，在您使用本公司提供的产品或服务时，我们将按照《用户隐私政策》（以下简称“本隐私政策”）</span><span style="font-family:楷体">遵循合法、正当、必要的原则，公开明示收集、使用您的个人信息。<span lang="EN-US"><br>
+</span><b>我们努力用通俗易懂、简明扼要的文字进行表达，并对本隐私政策中与您的权益密切相关的条款采用粗体字进行标注以提示您注意。</b>请您<span style="color:#333333">仔细阅读本隐私政策的全部条款以便您了解本产品收集、使用您个人信息的目的、范围、方式等。<b>如果您为<span lang="EN-US">14</span>周岁以下（含）的儿童，则请您在法定监护人陪同下审阅本隐私政策，经法定监护人审阅并同意后，您方可使用本公司产品并提供个人信息。如果您或监护人不同意本隐私政策任何内容，您应立即停止使用本公司的产品或服务。当您使用本公司提供的任一产品或服务时，即表示您已同意我们按照本隐私政策来收集、使用、存储和保护您的相关信息。</b>如您对本隐私政策有任何疑问，可以通过拨打联系电话</span></span><span lang="EN-US">400-998-3088</span><span style="font-family:楷体;color:#333333">或者发送邮件至</span><span lang="EN-US">sales@infisense.cn</span><span style="font-family:楷体;color:#333333">与我们联系，我们会在法定期限内及时答复您的请求或申诉。<span lang="EN-US"><br>
+</span>我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则，保护您的个人信息：权责一致原则、目的明确原则、选择同意原则、最小必要原则、确保安全原则、主体参与原则、公开透明原则等。同时，我们承诺，<b>我们将按业界成熟的安全标准，采取相应的安全保护措施来保护您的个人信息。</b><span lang="EN-US"><br>
 <br>
-</span><b>����˽���߽������˽��������ݣ�</b><span lang=EN-US><br>
-</span><b>һ�����÷�Χ</b><span lang=EN-US><br>
-</span><b>������������ռ���ʹ�����ĸ�����Ϣ</b><span lang=EN-US><br>
-</span><b>�����������ʹ��<span lang=EN-US> Cookie </span>��ͬ�༼��</b><span lang=EN-US><br>
-</span><b>�ġ�������ι�����ת�á�������¶���ĸ�����Ϣ</b><span lang=EN-US><br>
-</span><b>�塢������δ洢���ĸ�����Ϣ</b><span lang=EN-US><br>
-</span><b>����������α������ĸ�����Ϣ</b></span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><b><span
-style='font-family:����;color:#333333'>�ߡ�����Ȩ��<span lang=EN-US><br>
-</span>�ˡ������ߵ��޶�</span></b><span lang=EN-US style='font-family:����;color:#333333'><br>
-</span><b><span style='font-family:����;color:#333333'>�š������Ͻ</span></b><span
-lang=EN-US style='font-family:����;color:#333333'><br>
+</span><b>本隐私政策将帮您了解以下内容：</b><span lang="EN-US"><br>
+</span><b>一、适用范围</b><span lang="EN-US"><br>
+</span><b>二、我们如何收集和使用您的个人信息</b><span lang="EN-US"><br>
+</span><b>三、我们如何使用<span lang="EN-US"> Cookie </span>和同类技术</b><span lang="EN-US"><br>
+</span><b>四、我们如何共享、转让、公开披露您的个人信息</b><span lang="EN-US"><br>
+</span><b>五、我们如何存储您的个人信息</b><span lang="EN-US"><br>
+</span><b>六、我们如何保护您的个人信息</b></span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><b><span style="font-family:楷体;color:#333333">七、您的权利<span lang="EN-US"><br>
+</span>八、本政策的修订</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+</span><b><span style="font-family:楷体;color:#333333">九、争议管辖</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
 <br>
-</span><b><span style='font-family:����;color:#333333'>һ�����÷�Χ</span></b><span
-lang=EN-US style='font-family:����;color:#333333'><br>
-1. </span><span style='font-family:����;color:#333333'>����˽���������ڳ�ĳЩ�ض���Ʒ�ͷ����Ȿ��˾�ṩ�����еĲ�Ʒ�ͷ�����Щ�ض���Ʒ�ͷ��������ض�����˽���ߡ����ض��������˽���߹��ɱ���˽���ߵ�һ���֡�������ض��������˽�����뱾��˽�����в�һ��֮�������ø��ض��������˽���ߡ�<span
-lang=EN-US><br>
-2. </span>��Ҫ�ر�˵�����ǣ�����˽���߲������ڳ�����˽���ߵ�����Լ������ȷ�ϵ��������������Ϣ�����������������ṩ�ķ���<b>����֪Ϥ������������������վ��ʹ�õ�������Ʒ������ʱ�����ṩ������Ϣ����������ϢӦ�����øõ���������˽���ߣ����ǲ��е��κη������Σ�������ʱ�����ϸ�Ķ��õ���������˽���߲�ȷ���Ƿ���ܡ�</b><span
-lang=EN-US><br>
+</span><b><span style="font-family:楷体;color:#333333">一、适用范围</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+1. </span><span style="font-family:楷体;color:#333333">本隐私政策适用于除某些特定产品和服务外本公司提供的所有的产品和服务。这些特定产品和服务将适用特定的隐私政策。该特定服务的隐私政策构成本隐私政策的一部分。如相关特定服务的隐私政策与本隐私政策有不一致之处，适用该特定服务的隐私政策。<span lang="EN-US"><br>
+2. </span>需要特别说明的是，本隐私政策不适用于除本隐私政策第四条约定经您确认的与第三方共享信息外其他第三方向您提供的服务。<b>请您知悉：如果您浏览第三方网站或使用第三方产品、服务时向其提供个人信息，则您的信息应当适用该第三方的隐私政策，我们不承担任何法律责任，请您届时务必仔细阅读该第三方的隐私政策并确认是否接受。</b><span lang="EN-US"><br>
 <br>
-</span><b>������������ռ���ʹ�����ĸ�����Ϣ</b><span lang=EN-US><br>
-</span>������Ϣ��ָ�Ե��ӻ���������ʽ��¼���ܹ�����������������Ϣ���ʶ���ض���Ȼ�����ݻ��߷�ӳ�ض���Ȼ�˻����ĸ�����Ϣ��<span
-lang=EN-US>14 </span>�������£�������ͯ�ĸ�����Ϣ���ڸ���������Ϣ��<span lang=EN-US><br>
-<b>1. </b></span><b>��������ʹ�÷���������ռ�����Ϣ�������ɹ涨���������Ƕ���������������ͬ�⣺</b><span lang=EN-US><br>
-</span>��<span lang=EN-US>1</span>�� �����״�ʹ�ñ���˾��Ʒ<span lang=EN-US>APP</span>ʱ�����ǽ���ȡ��������Ȩ�󣬽��ղ���¼����ʹ�õ��豸�����Ϣ������<b>�豸������Ϣ����<span
-lang=EN-US>IMEI</span>��<span lang=EN-US>IMSI</span>���豸�ͺš��豸���á�Ψһ�豸��ʶ������Ӳ��������Ϣ����</b>���Ա��������˻������װ�ȫ��<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>�� �����״�ʹ�ñ���˾��Ʒ<span lang=EN-US>APP</span>ʱ�����ǽ�������Ȩ���ȡ���Ķ�ȡ�ֻ�״̬�����Ա���<span
-lang=EN-US>APP</span>Ӧ�÷��������ʹ�ã���׼ȷ��λ�ͽ����ʹ��ʱ���������⣬�Ľ����Ż�<span lang=EN-US>APP</span>�������飻<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>3</span>�� �����״�ʹ�ñ���˾��Ʒ<span lang=EN-US>APP</span>�����ա�¼�񡢱��桢�ϴ�ͼƬ�����������豸ϵͳ��ͬ���ܻ��г������죩ʱ�����ǽ���������<b>�洢����λ����˷�������</b>Ȩ�ޣ������ڱ���ͼƬ���ļ��򻺴���Ϣ���ֻ���</span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><span
-style='font-family:����;color:#333333'>��<span lang=EN-US>4</span>�� ����ʹ�ñ���˾��Ʒ��Ʒ<span
-lang=EN-US>APP</span>�����У����ǻ�����ֻ��������жϺ��������������Դ���չʾ������ȷ��ͼ��</span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><span
-style='font-family:����;color:#333333'>��<span lang=EN-US>5</span>�� ����ʹ�ñ���˾��Ʒ��Ʒ<span
-lang=EN-US>APP</span>�����У������ڵõ������������ֻ����ٶȴ��������ڻ�ȡλ����ص���Ϣ�����浽��Ƭ�</span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><span
-lang=EN-US style='font-family:����;color:#333333'>&nbsp;</span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><b><span
-lang=EN-US style='font-family:����;color:#333333'>3. </span></b><b><span
-style='font-family:����;color:#333333'>��������ͬ������⣺</span></b><span lang=EN-US
-style='font-family:����;color:#333333'><br>
-</span><b><span style='font-family:����;color:#333333'>��<span lang=EN-US>1</span>��
-�������Ϣ���������з��ɷ���涨��������صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>�� ����Ұ�ȫ��������ȫֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>3</span>�� �빫����ȫ�������������ش󹫹�����ֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>4</span>�� ��������顢���ߡ����к��о�ִ�е�ֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>5</span>�� ����ά��������Ϣ������������˵��������Ʋ����ش�Ϸ�Ȩ�浫�ֺ��ѵõ�������Ȩͬ��ģ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>6</span>�� ���漰�ĸ�����Ϣ�Ǹ�����Ϣ������������ṫ�ڹ����ģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>7</span>�� ���ݸ�����Ϣ����Ҫ��ǩ�������к�ͬ������ģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>8</span>�� �ӺϷ�������¶����Ϣ���ռ�������Ϣ�ģ���Ϸ������ű�����������Ϣ������������<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>9</span>�� ά�����ṩ��Ʒ�����İ�ȫ�ȶ�����������ģ��緢�֡����ò�Ʒ�����Ĺ��ϣ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>10</span>�� ������Ϣ������Ϊ���ŵ�λ�����俪չ�Ϸ������ű���������ġ�</span></b><span
-lang=EN-US style='font-family:����;color:#333333'><br>
-<b>4. </b></span><b><span style='font-family:����;color:#333333'>����������</span></b><span
-lang=EN-US style='font-family:����;color:#333333'><br>
-</span><span style='font-family:����;color:#333333'>���������ռ�����������Ϣ�����ǽ�ͨ�������ֶμ�ʱ�����������������ڲ�й¶��������Ϣ��ǰ���£�������Ȩ����������������û����ݽ��з������ھ�����ã���Ȩ�Ա���˾��Ʒ��ʹ���������ͳ�Ʒ��������ڿ��ܵĵ�������Ϣ������<span
-lang=EN-US><br>
+</span><b>二、我们如何收集和使用您的个人信息</b><span lang="EN-US"><br>
+</span>个人信息是指以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。<span lang="EN-US">14 </span>周岁以下（含）儿童的个人信息属于个人敏感信息。<span lang="EN-US"><br>
+<b>1. </b></span><b>我们在您使用服务过程中收集的信息，除法律规定情形外我们都将事先征得您的同意：</b><span lang="EN-US"><br>
+</span>（<span lang="EN-US">1</span>） 在您首次使用本公司产品<span lang="EN-US">APP</span>时，我们将在取得您的授权后，接收并记录您所使用的设备相关信息，包括<b>设备属性信息（如<span lang="EN-US">IMEI</span>、<span lang="EN-US">IMSI</span>、设备型号、设备设置、唯一设备标识符等软硬件特征信息）等</b>，以保障您的账户及交易安全；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>） 在您首次使用本公司产品<span lang="EN-US">APP</span>时，我们将在您授权后读取您的读取手机状态，用以保障<span lang="EN-US">APP</span>应用服务的正常使用，更准确定位和解决在使用时遇到的问题，改进及优化<span lang="EN-US">APP</span>服务体验；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">3</span>） 在您首次使用本公司产品<span lang="EN-US">APP</span>、拍照、录像、保存、上传图片（根据您的设备系统不同可能会有场景差异）时，我们将申请您的<b>存储、定位、麦克风和相机等</b>权限，以用于保存图片、文件或缓存信息到手机；</span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><span style="font-family:楷体;color:#333333">（<span lang="EN-US">4</span>） 在您使用本公司产品产品<span lang="EN-US">APP</span>过程中，我们会监听手机传感器判断横屏或者竖屏，以此来展示方向正确的图像。</span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><span style="font-family:楷体;color:#333333">（<span lang="EN-US">5</span>） 在您使用本公司产品产品<span lang="EN-US">APP</span>过程中，我们在得到允许后会监听手机加速度传感器用于获取位置相关的信息，保存到照片里。</span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><span lang="EN-US" style="font-family:楷体;color:#333333">&nbsp;</span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><b><span lang="EN-US" style="font-family:楷体;color:#333333">3. </span></b><b><span style="font-family:楷体;color:#333333">事先征得同意的例外：</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+</span><b><span style="font-family:楷体;color:#333333">（<span lang="EN-US">1</span>）
+与个人信息控制者履行法律法规规定的义务相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>） 与国家安全、国防安全直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">3</span>） 与公共安全、公共卫生、重大公共利益直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">4</span>） 与刑事侦查、起诉、审判和判决执行等直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">5</span>） 出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">6</span>） 所涉及的个人信息是个人信息主体自行向社会公众公开的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">7</span>） 根据个人信息主体要求签订和履行合同所必需的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">8</span>） 从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">9</span>） 维护所提供产品或服务的安全稳定运行所必需的，如发现、处置产品或服务的故障；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">10</span>） 个人信息控制者为新闻单位，且其开展合法的新闻报道所必需的。</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+<b>4. </b></span><b><span style="font-family:楷体;color:#333333">匿名化处理</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+</span><span style="font-family:楷体;color:#333333">对于我们收集到的您的信息，我们将通过技术手段及时进行匿名化处理。在不泄露您个人信息的前提下，我们有权对匿名化处理后的用户数据进行分析、挖掘和利用，有权对本公司产品的使用情况进行统计分析并用于可能的第三方信息共享。<span lang="EN-US"><br>
 <br>
-</span><b>�����������ʹ��<span lang=EN-US> Cookie </span>��ͬ�༼��</b><span lang=EN-US><br>
-</span>���ǻ����ǵĵ�����������飬����ͨ��<span lang=EN-US>cookies</span>��<span lang=EN-US>web
-beacon</span>�ռ���ʹ��������Ϣ�������õ���Ϣ����Ϊ��־��Ϣ��<span lang=EN-US><br>
-1.</span>��ס�������ݡ����磺<span lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>���������Ǳ�������Ϊ���ǵ�ע���û������ݡ�<span
-lang=EN-US><br>
-2. </span>����Ϊ����Ŀ��ʹ��<span lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>��ͬʱ�����ܽ�ͨ��<span
-lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>�ռ��ķǸ���������Ϣ����ͳ�Ƽӹ����ṩ������������飬���ڷ����û����ʹ�����ǵķ���<span
-lang=EN-US><br>
-</span>���ǵĲ�Ʒ�ͷ����Ͽ��ܻ����������������õ�<span lang=EN-US>cookies</span>��<span lang=EN-US>web
-beacon</span>����Щ<span lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>���ܻ��ռ�������صķǸ���������Ϣ�������ڷ��������ʹ�øõȲ�Ʒ�������Щ������<span
-lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>�ռ���ʹ�øõ���Ϣ�����ܱ���˽����Լ������������ص���������˽����Լ�������ǲ��Դ���<span
-lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>�е����Ρ�<span
-lang=EN-US><br>
-</span>������ͨ����������þܾ������<span lang=EN-US>cookies</span>��<b>����ע�⣬���ͣ��<span
-lang=EN-US>cookies</span>��<span lang=EN-US>web beacon</span>�����п����޷�������ѵķ������飬ĳЩ��Ʒ��������Ҳ�޷�����ʹ�á�</b><span
-lang=EN-US><br>
+</span><b>三、我们如何使用<span lang="EN-US"> Cookie </span>和同类技术</b><span lang="EN-US"><br>
+</span>我们或我们的第三方合作伙伴，可能通过<span lang="EN-US">cookies</span>和<span lang="EN-US">web
+beacon</span>收集和使用您的信息，并将该等信息储存为日志信息。<span lang="EN-US"><br>
+1.</span>记住您的身份。例如：<span lang="EN-US">cookies</span>和<span lang="EN-US">web beacon</span>有助于我们辨认您作为我们的注册用户的身份。<span lang="EN-US"><br>
+2. </span>我们为上述目的使用<span lang="EN-US">cookies</span>和<span lang="EN-US">web beacon</span>的同时，可能将通过<span lang="EN-US">cookies</span>和<span lang="EN-US">web beacon</span>收集的非个人身份信息，经统计加工后提供给其他合作伙伴，用于分析用户如何使用我们的服务。<span lang="EN-US"><br>
+</span>我们的产品和服务上可能会有其他合作方放置的<span lang="EN-US">cookies</span>和<span lang="EN-US">web
+beacon</span>。这些<span lang="EN-US">cookies</span>和<span lang="EN-US">web beacon</span>可能会收集与您相关的非个人身份信息，以用于分析您如何使用该等产品或服务。这些第三方<span lang="EN-US">cookies</span>和<span lang="EN-US">web beacon</span>收集和使用该等信息，不受本隐私政策约束，而是受相关第三方的隐私政策约束，我们不对此类<span lang="EN-US">cookies</span>和<span lang="EN-US">web beacon</span>承担责任。<span lang="EN-US"><br>
+</span>您可以通过浏览器设置拒绝或管理<span lang="EN-US">cookies</span>。<b>但请注意，如果停用<span lang="EN-US">cookies</span>或<span lang="EN-US">web beacon</span>，您有可能无法享受最佳的服务体验，某些产品或服务可能也无法正常使用。</b><span lang="EN-US"><br>
 <br>
-</span><b>�ġ�������ι�����ת�á�������¶���ĸ�����Ϣ</b><span lang=EN-US><br>
-1. </span>���ǻ��Ը߶ȵ���������Դ�������Ϣ�����ǻ��������ȷͬ�⣬���ǲ����뱾��˾������κι�˾����֯�͸��˷������ĸ�����Ϣ�������������޷�ʶ���ض������Ҳ��ܸ�ԭ�ĳ��⡣Ŀǰ�����ǻ������������У������������Թ���������Ϣ����Ȩͬ�⣺<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>1</span>�� ������<span lang=EN-US>Crash</span>������<span
-lang=EN-US>Crash</span>��Ϣ���̶߳�ջ��<span lang=EN-US>ROM/RAM/SD</span>������������<span
-lang=EN-US>/</span>���Ե�״̬<span lang=EN-US>APP</span>��Ϣ���������汾���������������豸��Ϣ��<span
-lang=EN-US>IMEI</span>���豸ʶ�����������Ӣ�Ƹ�֪�������޹�˾������<span lang=EN-US>SDK</span>�������ж�<span
-lang=EN-US>Crash</span>�豸ͳ�ƣ�������˽Э���ַ��</span><span lang=EN-US><a
-href="https://www.umeng.com/page/policy"><span style='font-family:����'>https://www.umeng.com/page/policy</span></a></span><span
-lang=EN-US style='font-family:����;color:#333333'> </span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><span
-style='font-family:����;color:#333333'>��<span lang=EN-US>2</span>�� ��������������˾��Ʒ<span
-lang=EN-US>APP</span>ʹ�ö�λȨ�ޣ�ͨ���ٶȵ�ͼ<span lang=EN-US>SDK</span>��ȡ����λ����Ϣ���ڱ���ͼƬ������ͬʱ�洢����λ����Ϣ���ٶȵ�ͼ��˽Э���ַ��</span><span
-lang=EN-US><a href="https://map.baidu.com/zt/client/privacy/index.html"><span
-style='font-family:����'>https://map.baidu.com/zt/client/privacy/index.html</span></a></span></p>
-
-<p class=MsoNormalCxSpMiddle style='line-height:normal;word-break:break-all'><span
-lang=EN-US style='font-family:����;color:#333333'><br>
-</span><span style='font-family:����;color:#333333'>���ǽ�����ںϷ�����������Ҫ���ض�����ȷ��Ŀ�Ĺ������ĸ�����Ϣ����������֮����������Ϣ�Ĺ�˾����֯�͸��ˣ����ǻ�����ǩ���ϸ�ı���Э����Ҫ�����ǰ������ǵ�˵�����������Լ������κ���صı��ܺͰ�ȫ��ʩ��������Ϣ��<span
-lang=EN-US><br>
-2. </span>���ǲ���Ƿ����ۡ��Ƿ��������ṩ������Ϣ�����ǲ��Ὣ���ĸõ���Ϣ�ṩ���κε�������Ҳ���������κ�����Ŀ�ĺ���;�������������γ��⣺<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>1</span>�� ��������ͬ�⣬���������¶��<span lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>�� ���ݷ��ɵ��йع涨������������˾��������Ҫ�������������������˾��������¶��<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>3</span>�� �������ṩ����ʱ�����ܽ�������Ϣ����������֤���ͻ����񡢰�ȫ������թƭ��⡢�浵�ͱ��ݵ���;����Ԥ�������֡�������թ��Σ����ȫ���Ƿ���Υ�������ǵ�Э�顢���߻�������Ϊ���Ա������������û������ǵĹ�����˾��������鼰���������εĵ�������Ӧ�̡������̡������̼���ṫ�ڵĺϷ�Ȩ�棬��ȷ�����������ṩ�Ĳ�Ʒ�ͷ���İ�ȫ�ԣ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>4</span>�� ��������������������ṩ����˾��Ʒƽ̨����ط����������������Ҹõȵ�����ͬ��е�������ͬ�ȵı����û���˽�����Σ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>5</span>�� �������ݷ��ɡ������������Ӧ���е���¶��<span lang=EN-US><br>
-3. </span>���ǽ��������������£�������¶���ĸ�����Ϣ��<span lang=EN-US><br>
-</span>��<span lang=EN-US>1</span>�� �������ȷͬ���<span lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>�� ���ڷ��ɵ���¶���ڷ��ɡ����ɳ������ϻ��������ܲ���ǿ����Ҫ�������£����ǿ��ܻṫ����¶���ĸ�����Ϣ��<span
-lang=EN-US><br>
-<b>4. </b></span><b>������ת�á�������¶������Ϣʱ����������Ȩͬ������⣺<span lang=EN-US><br>
-</span></b>��<span lang=EN-US>1</span>�� �������Ϣ���������з��ɷ���涨��������صĻ���ݸ�����Ϣ����Ҫ��ǩ�������к�ͬ������ģ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>�� ����Ұ�ȫ��������ȫֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>3</span>�� �빫����ȫ�������������ش󹫹�����ֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>4</span>�� ��������顢���ߡ����к��о�ִ�е�ֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>5</span>�� ����ά��������Ϣ������������˵��������Ʋ����ش�Ϸ�Ȩ�浫�ֺ��ѵõ�������Ȩͬ��ģ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>6</span>�� ������Ϣ������������ṫ�ڹ����ĸ�����Ϣ��<span lang=EN-US><br>
-</span>��<span lang=EN-US>7</span>�� �ӺϷ�������¶����Ϣ���ռ�������Ϣ�ģ���Ϸ������ű�����������Ϣ������������<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>8</span>������ά�����ṩ�Ĳ�Ʒ�����İ�ȫ�ȶ�����������ģ����緢�֡����ò�Ʒ�����Ĺ��ϣ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>9</span>�����ɷ���涨���������Ρ�<span lang=EN-US><br>
-5. </span><b>���ݷ��ɹ涨��������ת�á���¶��ȥ��ʶ�������ĸ�����Ϣ����ȷ�����ݽ��շ��޷���ԭ������ʶ����Ϣ����ģ������ڸ�����Ϣ�Ķ��⹲����ת�ü�������¶��Ϊ���Դ������ݵı��漰��������������������ͬ�⡣</b><span
-lang=EN-US><br>
+</span><b>四、我们如何共享、转让、公开披露您的个人信息</b><span lang="EN-US"><br>
+1. </span>我们会以高度的勤勉义务对待您的信息，除非获得您的明确同意，我们不会与本公司以外的任何公司、组织和个人分享您的个人信息，但经过处理无法识别特定个人且不能复原的除外。目前，我们会在以下情形中，向您征求您对共享个人信息的授权同意：<span lang="EN-US"><br>
+</span>（<span lang="EN-US">1</span>）友盟 SDK 获取您的设备信息(如 Android_ID 等详情见友盟隐私协议)用于用户统计分析。 将您的<span lang="EN-US">Crash</span>环境：<span lang="EN-US">Crash</span>信息及线程堆栈，<span lang="EN-US">ROM/RAM/SD</span>卡容量、网络<span lang="EN-US">/</span>语言等状态<span lang="EN-US">APP</span>信息：包名、版本、所属进程名，设备信息：<span lang="EN-US">IMEI</span>等设备识别分享至无锡英菲感知技术有限公司的友盟<span lang="EN-US">SDK</span>，用于判断<span lang="EN-US">Crash</span>设备统计；友盟隐私协议地址：</span><span lang="EN-US"><a href="https://www.umeng.com/page/policy"><span style="font-family:楷体">https://www.umeng.com/page/policy</span></a></span><span lang="EN-US" style="font-family:楷体;color:#333333"> </span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><span style="font-family:楷体;color:#333333">（<span lang="EN-US">2</span>） 您可以允许本公司产品<span lang="EN-US">APP</span>使用定位权限，通过百度地图<span lang="EN-US">SDK</span>获取您的位置信息，在保存图片功能中同时存储您的位置信息；百度地图隐私协议地址：</span><span lang="EN-US"><a href="https://map.baidu.com/zt/client/privacy/index.html"><span style="font-family:楷体">https://map.baidu.com/zt/client/privacy/index.html</span></a></span></p><p class="MsoNormalCxSpMiddle" style="line-height:normal;word-break:break-all"><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+</span><span style="font-family:楷体;color:#333333">我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息。对我们与之共享个人信息的公司、组织和个人，我们会与其签署严格的保密协定，要求他们按照我们的说明、本政策以及其他任何相关的保密和安全措施来处理信息。<span lang="EN-US"><br>
+2. </span>我们不会非法出售、非法向他人提供您的信息；我们不会将您的该等信息提供给任何第三方，也不会用于任何其他目的和用途，但是以下情形除外：<span lang="EN-US"><br>
+</span>（<span lang="EN-US">1</span>） 经您事先同意，向第三方披露；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>） 根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">3</span>） 在我们提供服务时，可能将您的信息用于身份验证、客户服务、安全防范、诈骗监测、存档和备份等用途，以预防、发现、调查欺诈、危害安全、非法或违反与我们的协议、政策或规则的行为，以保护您、其他用户、我们的关联公司、合作伙伴及其他受信任的第三方供应商、服务商、代理商及社会公众的合法权益，以确保我们向您提供的产品和服务的安全性；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">4</span>） 我们与第三方合作向您提供本公司产品平台的相关服务或其他网络服务，且该等第三方同意承担与我们同等的保护用户隐私的责任；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">5</span>） 其他根据法律、法规或者政策应进行的披露。<span lang="EN-US"><br>
+3. </span>我们仅会在以下情形下，公开披露您的个人信息：<span lang="EN-US"><br>
+</span>（<span lang="EN-US">1</span>） 获得您明确同意后；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>） 基于法律的披露：在法律、法律程序、诉讼或政府主管部门强制性要求的情况下，我们可能会公开披露您的个人信息。<span lang="EN-US"><br>
+<b>4. </b></span><b>共享、转让、公开披露个人信息时事先征得授权同意的例外：<span lang="EN-US"><br>
+</span></b>（<span lang="EN-US">1</span>） 与个人信息控制者履行法律法规规定的义务相关的或根据个人信息主体要求签订和履行合同所必需的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>） 与国家安全、国防安全直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">3</span>） 与公共安全、公共卫生、重大公共利益直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">4</span>） 与刑事侦查、起诉、审判和判决执行等直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">5</span>） 出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">6</span>） 个人信息主体自行向社会公众公开的个人信息；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">7</span>） 从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">8</span>）用于维护所提供的产品或服务的安全稳定运行所必需的，例如发现、处置产品或服务的故障；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">9</span>）法律法规规定的其他情形。<span lang="EN-US"><br>
+5. </span><b>根据法律规定，共享、转让、披露经去标识化处理的个人信息，且确保数据接收方无法复原并重新识别信息主体的，不属于个人信息的对外共享、转让及公开披露行为，对此类数据的保存及处理无需另行征得您的同意。</b><span lang="EN-US"><br>
 <br>
-</span><b>�塢������δ洢���ĸ�����Ϣ</b><span lang=EN-US><br>
-</span>�������л����񹲺͹�������Ӫ���ռ��Ͳ����ĸ�����Ϣ��ԭ���ϴ洢���й����ڣ��������й��л����񹲺͹����ɷ��桢���Ź��µȹ涨�Ĵ洢���޴洢���ĸ�����Ϣ��<span
-lang=EN-US><br>
+</span><b>五、我们如何存储您的个人信息</b><span lang="EN-US"><br>
+</span>我们在中华人民共和国境内运营中收集和产生的个人信息，原则上存储在中国境内，并按照中国中华人民共和国法律法规、部门规章等规定的存储期限存储您的个人信息。<span lang="EN-US"><br>
 <br>
-</span><b>����������α������ĸ�����Ϣ</b><span lang=EN-US><br>
-1. </span>���Ƿǳ��������ĸ�����Ϣ��ȫ������Ŭ����ȡ���ֺ��������������Ӻ͹�������İ�ȫ��ʩ���������ĸ�����Ϣ������������Ŭ��ʹ���ĸ�����Ϣ���ᱻй©��������߶�ʧ��������������<span
-lang=EN-US>SSL</span>����Ϣ���ܴ洢���������ĵķ��ʿ��ơ����ǶԿ��ܽӴ�����������Ϣ��Ա���������ԱҲ��ȡ���ϸ�����������������ڲ�ȡ��Ϣ����Ȩ�޿��ơ���Ӵ�������Ϣ����Աǩ����Э�顢��ظõ���Ա�Ĳ�������ȴ�ʩ��<span
-lang=EN-US><br>
-2. </span><b>������������<span lang=EN-US>1</span>���Լ���������������Ⲣ���ף����ڴ��ڸ��ָ����޷�Ԥ֪�����м����޷������Ķ����ֶΣ����������Ѿ�������ȡ��Ҫ�ı�����ʩ��������Ϣ���п��ܱ�й¶���������ʧ��</b>�ڲ��ҷ���ǰ��������Ϣ��ȫ�¼������ǽ����շ��ɷ����Ҫ�󣬼�ʱ������֪��ȫ�¼��Ļ�������Ϳ��ܵ�Ӱ�졢�����Ѳ�ȡ��Ҫ��ȡ�Ĵ�����ʩ���������������ͽ��͵ķ��յĽ��顢�����Ĳ��ȴ�ʩ�ȡ����ǽ���ʱ���¼���������վ��֪ͨ������֪ͨ���绰���ʼ�����Ԥ������ϵ��ʽ��֪����������һ��֪ʱ���ǻ��ȡ��������Ч�ķ�ʽ�������档ͬʱ�����ǻ������ռ�ܲ���Ҫ�������ϱ�������Ϣ��ȫ�¼��Ĵ��������<b>�������������˺š��������κ�ԭ���Ѿ����߽�Ҫй¶ʱ����Ӧ��������������ϵ���Ա����ǿ��Լ�ʱ��ȡӦ�Դ�ʩ��ֹ��������������ʧ��</b><span
-lang=EN-US><br>
-3. </span>������Ƿ�����ҵ�ϲ������������εģ���������Ϣ���ɽ�ʱ��������ҵ����������б������񣬲��������Թ��桢���Ż��������淽ʽ֪ͨ����������ǵĲ�Ʒ������ֹͣ��Ӫ�ģ������ǽ���ʱֹͣ�����ռ�������Ϣ�����Թ��桢���ŵȷ�ʽ֪ͨ������ʱ���ǽ���������Ϣ����ɾ�������仯������<span
-lang=EN-US><br>
+</span><b>六、我们如何保护您的个人信息</b><span lang="EN-US"><br>
+1. </span>我们非常重视您的个人信息安全。我们努力采取各种合理的物理、电子和管理方面的安全措施来保护您的个人信息，并尽最大合理努力使您的个人信息不会被泄漏、毁损或者丢失，包括但不限于<span lang="EN-US">SSL</span>、信息加密存储、数据中心的访问控制。我们对可能接触到您个人信息的员工或外包人员也采取了严格管理，包括但不限于采取信息访问权限控制、与接触个人信息的人员签署保密协议、监控该等人员的操作情况等措施。<span lang="EN-US"><br>
+2. </span><b>尽管有上述第<span lang="EN-US">1</span>款的约定，但是请您理解并明白，由于存在各种各样无法预知或现有技术无法防御的恶意手段，即便我们已经尽力采取必要的保护措施，您的信息仍有可能被泄露、毁损或灭失。</b>在不幸发生前述个人信息安全事件后，我们将按照法律法规的要求，及时向您告知安全事件的基本情况和可能的影响、我们已采取或将要采取的处理措施、您可自主防范和降低的风险的建议、对您的补救措施等。我们将及时将事件相关情况以站内通知、短信通知、电话、邮件等您预留的联系方式告知您，难以逐一告知时我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况。<b>如您发现您的账号、密码因任何原因已经或者将要泄露时，您应当立即跟我们联系，以便我们可以及时采取应对措施防止或减少您的相关损失。</b><span lang="EN-US"><br>
+3. </span>如果我们发生企业合并、分立等情形的，则您的信息将由届时存续的企业主体继续履行保护义务，并由我们以公告、短信或其他书面方式通知您；如果我们的产品、服务停止运营的，则我们将及时停止继续收集您的信息，并以公告、短信等方式通知您，届时我们将对您的信息进行删除或隐匿化处理。<span lang="EN-US"><br>
 <br>
-</span></span></p>
-
-<p class=MsoNormalCxSpMiddle style='text-align:justify;text-justify:inter-ideograph;
-line-height:normal'><b><span style='font-family:����;color:#333333'>�ߡ�����Ȩ��<span
-lang=EN-US><br>
-</span></span></b><span style='font-family:����;color:#333333'>���Ƿǳ��������Ը�����Ϣ�Ĺ���������ȫ�����������ڸ�����Ϣ�ķ��ʡ�������ɾ��������ͬ���Լ���������Ȩ����ʹ��ӵ�г�ֵ�����ά��������˽�͸�����Ϣ��ȫ��<span
-lang=EN-US><br>
-1.</span>���ʡ��޸ġ����ơ�ɾ�����ĸ�����Ϣ<span lang=EN-US><br>
-</span>��������ʱ���ʡ��޸ġ��������ĸ�����Ϣ�������������Σ����������������ɾ��������Ϣ������<span lang=EN-US><br>
-</span>��<span lang=EN-US>1</span>��������Ǵ���������Ϣ����ΪΥ�����ɷ��棻<span lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>��������Ǵ���������Ϣ����ΪΥ����������Լ����<span lang=EN-US><br>
-</span>��<span lang=EN-US>3</span>�����������ֹ��Ӫ�����񣬻���������������Ȩͬ�⣻<span lang=EN-US><br>
-</span>��<span lang=EN-US>4</span>�����ɡ���������涨���������Ρ�<span lang=EN-US><br>
-</span>�����Ǿ�����Ӧ����ɾ���������ǻ���ͬʱ������֪ͨ�����Ǵ������������Ϣ�ĵ�������Ҫ���估ʱɾ�������Ƿ��ɷ������й涨����Щ�������ѻ�����Ķ�����Ȩ��<span
-lang=EN-US><br>
-</span>������ֱ���ڿͻ��˷��ʡ��޸ġ����ơ�ɾ���ĸ�����Ϣ��������ʹ��������Ȩ������Ҳ����ͨ���������ṩ����ϵ��ʽ������������ύ�����ǡ�<span
-lang=EN-US><br>
-2.</span>����ͬ��<span lang=EN-US><br>
-</span>�����ṩ���ض�ҵ���ܽ���Ҫ��������Ȩͬ���ṩ����Ϣ���߿������豸Ȩ�޲��ܵ�����ɣ�������ͨ���ر���Ӧҵ���ܵķ�ʽ���ظõ�ͬ�⡣��������ͬ��������޷�����Ϊ���ṩ��Ӧ�Ĺ��ܣ�Ҳ���ٴ�������Ӧ�ĸ�����Ϣ����������ͬ��ľ���������Ӱ�����Ǵ�ǰ����������Ȩ����չ�ĸ�����Ϣ������<span
-lang=EN-US><br>
-3.</span>��Ӧ��������<span lang=EN-US><br>
-</span>Ϊ���ϰ�ȫ�����ǻ�����֤�����ݺ�ʱ������������<b>�����޶��ظ�����Ҫ���༼���ֶΣ����磬��Ҫ������ϵͳ��Ӹ����ϸı����й������������˺Ϸ�Ȩ��������ջ��߷ǳ�����ʵ�ʵ��������ǿ��ܻ����Ծܾ���</b><span
-lang=EN-US><br>
-</span><b>�������������֮һʱ�����ǿ����޷���Ӧ��������<span lang=EN-US><br>
-</span>��<span lang=EN-US>1</span>�����������з��ɷ���涨��������صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>2</span>������Ұ�ȫ��������ȫֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>3</span>���빫����ȫ�������������ش󹫹�����ֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>4</span>����������顢���ߡ����к�ִ���о���ֱ����صģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>5</span>�������г��֤�ݱ������������۶��������Ȩ���ģ�<span lang=EN-US><br>
-</span>��<span lang=EN-US>6</span>������ά���������˵��������Ʋ����ش�Ϸ�Ȩ���ֺ��ѵõ�������Ȩͬ��ģ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>7</span>����Ӧ�������󽫵����������ˡ���֯�ĺϷ�Ȩ���ܵ������𺦵ģ�<span
-lang=EN-US><br>
-</span>��<span lang=EN-US>8</span>���漰��ҵ���ܵġ�<span lang=EN-US><br>
+</span></span></p><p class="MsoNormalCxSpMiddle" style="text-align:justify;text-justify:inter-ideograph;
+line-height:normal"><b><span style="font-family:楷体;color:#333333">七、您的权利<span lang="EN-US"><br>
+</span></span></b><span style="font-family:楷体;color:#333333">我们非常重视您对个人信息的管理，并尽全力保障您对于个人信息的访问、更正、删除、撤回同意以及其他法定权利，使您拥有充分的能力维护您的隐私和个人信息安全。<span lang="EN-US"><br>
+1.</span>访问、修改、复制、删除您的个人信息<span lang="EN-US"><br>
+</span>您可以随时访问、修改、复制您的个人信息，发生以下情形，您可以向我们提出删除个人信息的请求：<span lang="EN-US"><br>
+</span>（<span lang="EN-US">1</span>）如果我们处理个人信息的行为违反法律法规；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>）如果我们处理个人信息的行为违反了与您的约定；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">3</span>）如果我们终止运营及服务，或者您撤回您的授权同意；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">4</span>）法律、行政法规规定的其他情形。<span lang="EN-US"><br>
+</span>若我们决定响应您的删除请求，我们还将同时尽可能通知从我们处获得您个人信息的第三方，要求其及时删除，除非法律法规另有规定或这些第三方已获得您的独立授权。<span lang="EN-US"><br>
+</span>对难以直接在客户端访问、修改、复制、删除的个人信息，或者行使其他法定权利，您也可以通过本政策提供的联系方式，将相关申请提交给我们。<span lang="EN-US"><br>
+2.</span>撤回同意<span lang="EN-US"><br>
+</span>我们提供的特定业务功能将需要基于您授权同意提供的信息或者开启的设备权限才能得以完成，您可以通过关闭相应业务功能的方式撤回该等同意。当您撤回同意后，我们无法继续为您提供对应的功能，也不再处理您相应的个人信息。但您撤回同意的决定，不会影响我们此前基于您的授权而开展的个人信息处理。<span lang="EN-US"><br>
+3.</span>响应您的请求<span lang="EN-US"><br>
+</span>为保障安全，我们会在验证您身份后及时处理您的请求。<b>对于无端重复、需要过多技术手段（例如，需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者非常不切实际的请求，我们可能会予以拒绝。</b><span lang="EN-US"><br>
+</span><b>如存在以下情形之一时，我们可能无法响应您的请求：<span lang="EN-US"><br>
+</span>（<span lang="EN-US">1</span>）与我们履行法律法规规定的义务相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>）与国家安全、国防安全直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">3</span>）与公共安全、公共卫生、重大公共利益直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">4</span>）与刑事侦查、起诉、审判和执行判决等直接相关的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">5</span>）我们有充分证据表明您存在主观恶意或滥用权利的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">6</span>）出于维护您或他人的生命、财产等重大合法权益又很难得到本人授权同意的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">7</span>）响应您的请求将导致您或他人、组织的合法权益受到严重损害的；<span lang="EN-US"><br>
+</span>（<span lang="EN-US">8</span>）涉及商业秘密的。<span lang="EN-US"><br>
 <br>
-</span></b></span></p>
-
-<p class=MsoNormalCxSpMiddle style='text-align:justify;text-justify:inter-ideograph;
-line-height:normal'><b><span style='font-family:����;color:#333333'>�ˡ������ߵ��޶�</span></b><span
-lang=EN-US style='font-family:����;color:#333333'><br>
-</span><span style='font-family:����;color:#333333'>���ǿɲ������޸ı���˽���ߣ���������˽���߽����޶���Чǰͨ������˾��Ʒƽ̨������������ʵ���ʽ֪ͨ�����õ�����£���������ʹ�����ǵķ��񣬼���ʾͬ���ܾ��޶�����˽���ߵ�Լ����</span></p>
-
-<p class=MsoNormal style='line-height:13.5pt;word-break:break-all'><span
-lang=EN-US style='font-family:����;color:#333333'>&nbsp;</span></p>
-
-<p class=MsoNormal style='line-height:13.5pt;word-break:break-all'><b><span
-style='font-family:����;color:#333333'>�š������Ͻ</span></b><span lang=EN-US
-style='font-family:����;color:#333333'><br>
-1. </span><span style='font-family:����;color:#333333'>����˽���ߵ�ǩ������Ч�����С�����Ľ���������л����񹲺͹����ɡ�<span
-lang=EN-US><br>
-2. </span>�йر�Э�������Ӧͨ���Ѻ�Э�̽�������Э�̲��ɣ������齫�ύ��˾���ڵ��й�ϽȨ�ķ�Ժ���Ͻ����</span><span
-lang=EN-US style='font-family:����;color:#333333'><br>
+</span></b></span></p><p class="MsoNormalCxSpMiddle" style="text-align:justify;text-justify:inter-ideograph;
+line-height:normal"><b><span style="font-family:楷体;color:#333333">八、本政策的修订</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+</span><span style="font-family:楷体;color:#333333">我们可不定期修改本隐私政策，变更后的隐私政策将在修订生效前通过本公司产品平台公告或以其他适当方式通知您。该等情况下，若您继续使用我们的服务，即表示同意受经修订的隐私政策的约束。</span></p><p class="MsoNormal" style="line-height:13.5pt;word-break:break-all"><span lang="EN-US" style="font-family:楷体;color:#333333">&nbsp;</span></p><p class="MsoNormal" style="line-height:13.5pt;word-break:break-all"><b><span style="font-family:楷体;color:#333333">九、争议管辖</span></b><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
+1. </span><span style="font-family:楷体;color:#333333">本隐私政策的签订、生效、履行、争议的解决均适用中华人民共和国法律。<span lang="EN-US"><br>
+2. </span>有关本协议的争议应通过友好协商解决，如果协商不成，该争议将提交公司所在地有管辖权的法院诉讼解决。</span><span lang="EN-US" style="font-family:楷体;color:#333333"><br>
 <br>
-</span></p>
-
-<h1><strong>��Ʒ������������</strong></h1>
-
-<p class=MsoNormal><span style='line-height:107%;font-family:����;color:#333333'>����˾��Ʒ��������ȡ�κη��á��ֻ�����������������<span
-lang=EN-US>GPRS</span>������������Ӫ����ȡ��</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>1��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>��������������Ӣ�Ƹ�֪�������޹�˾�����¼�Ʊ���˾��������������һ�а�Ȩ��֪ʶ��Ȩ���Լ���������ص�������Ϣ���ݣ������������ڣ����ֱ���������ϡ�ͼ�ꡢͼ�Ρ�ͼ����ɫ�ʡ�������ơ������ܡ��й����ݡ�ӡˢ���ϡ�������ĵ��Ⱦ�������Ȩ���͹�������Ȩ��Լ�Լ�����֪ʶ��Ȩ���ɷ���ı���������˾���еĲ�Ʒ������������������������ڱ���˾֪ʶ��Ȩ���ڴ˲�δ��Ȩ��</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>2��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>�������ָ���ֻ����п�������Բ�ͬ���ֻ�Ʒ�ƺ��ͺţ��ṩ��ͬ�İ汾�����������Ժͼ�����֤��ʹ��ʱ����ע���ֻ��ͺŵĶ�Ӧ�������ֻ���ʹ�ò���ȷ�������汾�������ʹ���ϵ�һ�����⣬����˾���踺���Ҳ��ṩ�ͷ�֧�֡�</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>3��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>���ö��������з��򹤳̡������ࡢ���������޸���Ϊ���Ǿ�����˾��Ȩ��������ʽ�����������κ����������������������Ƿ������ء���װ��ʹ�ô��������������ܵ��²���Ԥ֪�ķ��գ��ɴ˲�����һ�з������������һ���뱾��˾�޹أ�����˾���Էǹٷ��汾�����ṩ�ͷ�֧�֡�</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>4��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>���������������������͡�����������Υ�����ҷ��ɡ�Σ�����Ұ�ȫ�����ͳһ������ȶ������ݣ����κβ����ġ�����̰��ġ�����ġ������ļ��κ�Υ�����ҷ��ɷ������ߵ����ݣ��ɴ˲�����һ�з������������һ���뱾��˾�޹أ����������ге���</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>5��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>ʹ�������漰��������������ƶ�ͨ�ŷ��񣬿��ܻ��ܵ��������ڲ��ȶ����ص�Ӱ�죬�����򲻿ɿ�����������������ڿ͹�����ϵͳ���ȶ����û�����λ�á��û��ػ��Լ������κ����硢������ͨ����·��ԭ����ɵķ����жϻ��������û�Ҫ��ķ��գ��û������ײ����ге����Ϸ��գ��û���˲��ܷ��ͻ�����Ķ���Ϣ����ӡ�������Ϣ������˾���е��κ����Ρ�</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>6��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>�û������������Ų��ŵ�ͨѶ��·���ϡ��������⡢���硢�ֻ����ϡ�ϵͳ���ȶ��Լ��������ֲ��ɿ���ԭ������ܵľ�����ʧ������˾���е����Ρ�</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>7��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>�������ϵȲ��ɿ��¼�Ӱ�쵽������������еģ�����˾��ŵ�ڵ�һʱ��������ص�λ��ϣ���ʱ���������޸������û���˶����ܵľ�����ʧ������˾���е����Ρ�</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>8��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>�û�֮��ͨ���������������û������������󵼻���ƭ�����»���ܵ��µ��κ������������ϵ��˺��Լ������ϵ���ʧ���ɹ����������е��������Σ�һ���뱾��˾�޹ء�</span></p>
-
-<p class=MsoNormal><span lang=EN-US style='line-height:107%;font-family:����;
-color:#333333'>&nbsp;</span></p>
-
-<h1><strong>��ƷӦ����������</strong></h1>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>1��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>����Ʒʹ�÷ǳ������ĺ���̽������������κ�����£�<span
-lang=EN-US>APP</span>�򿪻�رգ���Ʒ������ػ�������Ҫ����ͷֱ�Ӷ�׼ǿ����Դ����̫�����������ȣ������򽫶Ժ���̽������������𺦣�����˾���е������������ܡ�ʹ�ò�Ʒ����ɵ��κ����Ρ�</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>2��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>����Ʒ�������Ϊҽ����е��Ҳ����ּ����ϡ����ơ�������Ԥ���κμ������������ݺͲ���ֵ�������˲ο���</span></p>
-
-<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
-lang=EN-US style='line-height:107%;font-family:����;color:#333333'>3��<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='line-height:107%;font-family:����;color:#333333'>�����ڳ���<span lang=EN-US>+50</span>��Ļ�����ʹ�ñ���Ʒ�����»������ܻ��𻵺���̽������</span></p>
-
-<p class=MsoNormal><span lang=EN-US style='line-height:107%;font-family:����;
-color:#333333'>&nbsp;</span></p>
-
-<p class=tar align=right style='margin:0cm;margin-bottom:.0001pt;text-align:
-right;background:white'><span style='font-family:����;color:#333333'>����Ӣ�Ƹ�֪�������޹�˾</span></p>
-
-<p class=tar align=right style='margin:0cm;margin-bottom:.0001pt;text-align:
-right;background:white'><span style='font-size:10.0pt;font-family:����;
-color:#333333'>�������ڣ�<span lang=EN-US>2022</span>��<span lang=EN-US>09</span>��<span
-lang=EN-US>15</span>��</span></p>
-
-<p class=tar align=right style='margin:0cm;margin-bottom:.0001pt;text-align:
-right;background:white'><span style='font-size:10.0pt;font-family:����;
-color:#333333'>��Ч���ڣ�<span lang=EN-US>2022</span>��<span lang=EN-US>09</span>��<span
-lang=EN-US>22</span>��</span></p>
-
-<p class=MsoNormal style='margin-left:315.0pt'><span lang=EN-US>&nbsp;</span></p>
-
-</div>
-
+</span></p><h1><strong>产品软件免责声明</strong></h1><p class="MsoNormal"><span style="line-height:107%;font-family:楷体;color:#333333">本公司产品软件不收取任何费用。手机由于上网而产生的<span lang="EN-US">GPRS</span>流量费用由运营商收取。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">1、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">本软件是由无锡英菲感知技术有限公司（以下简称本公司）开发。软件的一切版权等知识产权，以及与软件相关的所有信息内容，包括但不限于：文字表述及其组合、图标、图饰、图表、色彩、界面设计、版面框架、有关数据、印刷材料、或电子文档等均受著作权法和国际著作权条约以及其他知识产权法律法规的保护。本公司所有的产品、技术与所有软件程序均属于本公司知识产权，在此并未授权。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">2、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">软件针对指定手机进行开发，针对不同的手机品牌和型号，提供不同的版本，并经过测试和技术验证，使用时必须注意手机型号的对应。若在手机上使用不正确的软件版本，所造成使用上的一切问题，本公司不予负责，且不提供客服支持。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">3、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">不得对软件进行反向工程、反向汇编、反向编译等修改行为，非经本公司授权开发并正式发布的其它任何由软件衍生的软件均属非法，下载、安装、使用此类软件，将可能导致不可预知的风险，由此产生的一切法律责任与纠纷一概与本公司无关，本公司不对非官方版本软件提供客服支持。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">4、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">不得利用软件发表、传送、传播、储存违反国家法律、危害国家安全、祖国统一、社会稳定的内容，或任何不当的、侮辱诽谤的、淫秽的、暴力的及任何违反国家法律法规政策的内容，由此产生的一切法律责任与纠纷一概与本公司无关，将由您自行承担。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">5、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">使用软件涉及到互联网服务和移动通信服务，可能会受到各个环节不稳定因素的影响，存在因不可抗力、计算机病毒、黑客攻击、系统不稳定、用户所在位置、用户关机以及其他任何网络、技术、通信线路等原因造成的服务中断或不能满足用户要求的风险，用户须明白并自行承担以上风险，用户因此不能发送或接受阅读消息，或接、发错消息，本公司不承担任何责任。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">6、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">用户因第叁方如电信部门的通讯线路故障、技术问题、网络、手机故障、系统不稳定性及其他各种不可抗力原因而遭受的经济损失，本公司不承担责任。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">7、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">因技术故障等不可抗事件影响到服务的正常运行的，本公司承诺在第一时间内与相关单位配合，及时处理进行修复，但用户因此而遭受的经济损失，本公司不承担责任。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">8、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">用户之间通过本软件与其他用户交往，因受误导或欺骗而导致或可能导致的任何心理、生理上的伤害以及经济上的损失，由过错方依法承担所有责任，一概与本公司无关。</span></p><p class="MsoNormal"><span lang="EN-US" style="line-height:107%;font-family:楷体;
+color:#333333">&nbsp;</span></p><h1><strong>产品应用免责声明</strong></h1><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">1、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">本产品使用非常灵敏的红外探测器，因此在任何情况下（<span lang="EN-US">APP</span>打开或关闭，产品开机或关机）都不要将镜头直接对准强辐射源（如太阳、激光束等），否则将对红外探测器造成永久损害，本公司不承担因您不当保管、使用产品所造成的任何责任。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">2、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">本产品并非设计为医疗器械，也并非旨在诊断、治疗、治愈或预防任何疾病。所有数据和测量值仅供个人参考。</span></p><p class="MsoListParagraph" style="margin-left:21.0pt;text-indent:-21.0pt"><span lang="EN-US" style="line-height:107%;font-family:楷体;color:#333333">3、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span style="line-height:107%;font-family:楷体;color:#333333">请勿在超过<span lang="EN-US">+50</span>℃的环境中使用本产品。高温环境可能会损坏红外探测器。</span></p><p class="MsoNormal"><span lang="EN-US" style="line-height:107%;font-family:楷体;
+color:#333333">&nbsp;</span></p><p class="tar" align="right" style="margin:0cm;margin-bottom:.0001pt;text-align:
+right;background:white"><span style="font-family:楷体;color:#333333">无锡英菲感知技术有限公司</span></p><p class="tar" align="right" style="margin:0cm;margin-bottom:.0001pt;text-align:
+right;background:white"><span style="font-size:10.0pt;font-family:楷体;
+color:#333333">更新日期：<span lang="EN-US">2022</span>年<span lang="EN-US">09</span>月<span lang="EN-US">15</span>日</span></p><p class="tar" align="right" style="margin:0cm;margin-bottom:.0001pt;text-align:
+right;background:white"><span style="font-size:10.0pt;font-family:楷体;
+color:#333333">生效日期：<span lang="EN-US">2022</span>年<span lang="EN-US">09</span>月<span lang="EN-US">22</span>日</span></p><p class="MsoNormal" style="margin-left:315.0pt"><span lang="EN-US">&nbsp;</span></p><p></div></p></body></html></div>
 </body>
-
 </html>
